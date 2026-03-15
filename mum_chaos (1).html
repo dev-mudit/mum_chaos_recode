@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Mumbai Chaos</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+<canvas id="c" width="480" height="700"></canvas>
+
+<div id="title">
+  <div class="t-eyebrow"></div>
+  <div class="t-main">MUMBAI CHAOS</div>
+  <div class="t-sub">Mudit Agrawal</div>
+  <div class="t-rickshaw">🛺</div>
+  <button class="t-btn" onclick="startGame()">Start Engine</button>
+  <div class="t-hint">← → · A D — change lane<br>SPACE — use ability</div>
+</div>
+
+<div id="hud">
+  <div class="h-top">
+    <div><div class="h-lbl">Score</div><div class="h-score" id="hScore">0</div></div>
+    <div class="h-dist"><div class="h-lbl">Distance</div><div class="h-dist-v" id="hDist">0m</div></div>
+  </div>
+  <div class="h-lives" id="hLives">
+    <div class="life"></div><div class="life"></div><div class="life"></div><div class="life"></div><div class="life"></div>
+  </div>
+  <div class="h-phase" id="hPhase">Morning Rush</div>
+  <div class="h-ability" id="hAb">
+    <div class="ab-name" id="abName">HORN BLAST</div>
+    <div class="ab-key">[SPACE]</div>
+    <div class="ab-bar"><div class="ab-fill" id="abFill" style="width:100%"></div></div>
+  </div>
+</div>
+
+<div id="ph-ann">
+  <div class="ph-num" id="phNum">Phase 1</div>
+  <div class="ph-name" id="phName">Morning Rush</div>
+</div>
+
+<div id="rain-veil"></div>
+
+<div id="go">
+  <div class="go-big">HONK!!!</div>
+  <div class="go-sub">Time to pay challan</div>
+  <div class="go-grid">
+    <div class="go-card"><div class="go-val" id="goScore">0</div><div class="go-lbl">Score</div></div>
+    <div class="go-card"><div class="go-val" id="goDist">0m</div><div class="go-lbl">Distance</div></div>
+    <div class="go-card"><div class="go-val" id="goCol">0</div><div class="go-lbl">Collected</div></div>
+    <div class="go-card"><div class="go-val" id="goPhase">1</div><div class="go-lbl">Phase</div></div>
+  </div>
+  <button class="go-btn" onclick="startGame()">Back to Roads</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
